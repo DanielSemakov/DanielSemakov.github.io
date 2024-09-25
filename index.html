@@ -58,19 +58,32 @@
 				color: blue;
 			}
 
-			footer {
-				justify-content: center;
-				align-items: center;
+			.footer-links {
 				display: flex;
-				
+				justify-content: center;
 			}
 
-			.footer-link {
-				display: flex;
-				gap:25%;
-				float: left;
-				margin: auto 5px;
+			.footer-links a {
+				margin: 20px;
 			}
+
+			 .footer-links p {
+				display: inline;
+				font-size: 15px; 
+			} 
+
+			.footer-author {
+				text-align: center;
+			}
+
+			.footer-certification {
+				text-align: center;
+			}
+
+			.footer-certification a {
+				text-decoration: underline;
+			}
+
 		</style>
 	</head>
 	<body background="./blue-background.jpg">
@@ -115,24 +128,22 @@
 			</main>
 			<hr class="bottom-line">
 			<footer>
-				<div class="footer-link">
-					<a href = "itis3135/">ITIS 3135</a> 
-				</div>
-				<p>|</p>
-				<div class="footer-link">
-					<a href = "https://www.linkedin.com/in/daniel-semakov/">LinkedIn</a> 
-				</div>
-				<p>|</p>
-				<div class="footer-link">
-					<a href = "https://github.com/DanielSemakov">GitHub</a> 
-				</div>
-				<p>|</p>
-				<div class="footer-link">
-					<a href = "https://webpages.charlotte.edu/dsemako1/">CLT Web</a> 
-				</div>
-				<p>|</p>
-				<div class="footer-link">
+				<div class="footer-links">
+					<a href = "itis3135/">ITIS 3135</a>
+					<p>|</p>
+					<a href = "https://www.linkedin.com/in/daniel-semakov/">LinkedIn</a>
+					<p>|</p>
+					<a href = "https://github.com/DanielSemakov">GitHub</a>
+					<p>|</p>
+					<a href = "https://webpages.charlotte.edu/dsemako1/">CLT Web</a>
+					<p>|</p>
 					<a href = "https://danielsemakov.github.io/">GitHub Web</a>
+				</div>
+				<div class="footer-author">
+					<p>Designed by DSDesigns Inc &copy2024</p>
+				</div>
+				<div class="footer-certification">
+					<p>Certified in <a href="https://www.freecodecamp.org/certification/DanielSemakov/responsive-web-design">Response Web Design</a></p>
 				</div>
 			</footer>	
 		</div>
