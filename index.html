@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Daniel Semakov | Home Page</title>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 		<style>
 			header {
@@ -54,7 +54,16 @@
 			}
 
 			footer {
-				text-align: center;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				
+			}
+
+			.footer-link {
+				display: flex;
+				gap:20%;
+				float: left;
 			}
 
 		</style>
@@ -63,12 +72,12 @@
 		<header>
 			<h1>Daniel Semakov | Home Page</h1>
 			<h2>Thank you for stalking my website</h2>
-			<img src="daniel-semakov-pic.png" alt="Daniel Semakov smiling" width = 125 height = 222>
+			<img src="daniel-semakov-pic.png" alt="Daniel Semakov smiling" width="125" height="222">
 		</header>
 		<div class="text-background">
 			<main>
 				<h3><strong>Background</strong></h3>
-				<article></article>
+				<article>
 					<h4><strong>Personal Background</strong></h4>
 					<p>I was born in Charlotte, NC, moved to California at the age of 5, then returned to Charlotte at 18 years old.</p>
 				</article>
@@ -81,13 +90,13 @@
 					<p>Hp Windows laptop.</p>
 				</article>
 				<article>
-					<h4><strong>Courses I'm Taking & Why</strong></h4>
+					<h4><strong>Courses I'm Taking and Why</strong></h4>
 					<ul>
-						<li>ITCS 3112- Dsgn & Imp Object-oriented Sys: I want to review and strengthen my understanding of object-oriented programming principles</li>
+						<li>ITCS 3112- Dsgn &amp Imp Object-oriented Sys: I want to review and strengthen my understanding of object-oriented programming principles</li>
 						<li>ITCS 4101 - Intro to Natural Language Processing: To learn how AI chatbots like ChatGPT are able to appropriately respond to prompts</li>
 						<li>ITSC 2181 - Intro to Computer Systems: Learn about the underlying structures behind computers and how to manipulate them </li>
 						<li>ITIS 3135 - Web App Design and Development: Learn to how to create useful websites</li>
-						<li>ITIS 3310 - Software Architecture & Design: Learn how to thoroughly and efficiently design programs to meet my client’s needs</li>
+						<li>ITIS 3310 - Software Architecture &amp Design: Learn how to thoroughly and efficiently design programs to meet my client’s needs</li>
 					</ul>
 				</article>
 				<article>
@@ -101,21 +110,22 @@
 			</main>
 			<hr class="bottom-line">
 			<footer>
-				<div style="display: inline-block;">
+				<div class="footer-link">
 					<a href = "https://danielsemakov.github.io/itis3135/">ITIS 3135</a> 
 				</div>
-				<div style="display: inline-block;">
+				<div class="footer-link">
 					<a href = "https://www.linkedin.com/in/daniel-semakov/">LinkedIn</a> 
 				</div>
-				<div style="display: inline-block;">
+				<div class="footer-link">
 					<a href = "https://github.com/DanielSemakov">GitHub</a> 
 				</div>
-				<div style="display: inline-block;">
+				<div class="footer-link">
 					<a href = "https://webpages.charlotte.edu/dsemako1/">CLT Web</a> 
 				</div>
-				<div style="display: inline-block;">
+				<div class="footer-link">
 					<a href = "https://danielsemakov.github.io/">GitHub Web</a>
 				</div>
 			</footer>	
+		</div>
 	</body>
 </html>
