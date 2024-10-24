@@ -1,0 +1,79 @@
+header {
+    font-family: roboto sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 33px;
+    font-family: roboto sans-serif;
+    margin-top: 15px;
+}
+
+h4 {
+    font-family: arial sans-serif;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.text-background {
+    box-sizing: border-box; 
+    width: 80%; 
+    padding: 10px 20px; 
+    margin: 0 auto;
+    background-color: rgb(96, 166, 96);
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+    border-color: black;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links a {
+    margin: 20px;
+}
+
+    .footer-links p {
+    display: inline;
+    font-size: 15px; 
+} 
+
+.footer-author {
+    text-align: center;
+}
+
+.footer-certification {
+    text-align: center;
+}
+
+.footer-certification a {
+    text-decoration: underline;
+}
+
