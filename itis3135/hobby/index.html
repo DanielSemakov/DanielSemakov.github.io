@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Daniel Semakov | Chess</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<style>
+            body {
+                background-color: #9B7EBD;
+                font-family: 'proxima-nova';
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            #about-me-img {
+                width: 25%;
+                height: 25%;
+            }
+
+            #where-img {
+                width: 80%;
+                height: 80%;
+            }
+
+            #when-img {
+                width: 80%;
+                height: 80%;
+            }
+
+            #how-img {
+                width: 80%;
+                height: 80%; 
+            }
+
+            #why-img {
+                width: 85%;
+                height: 85%;
+            }
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                width: 85%;
+                height: 80%;
+            }
+
+            h1 {
+                margin-left: 10%;
+                font-size: 3em;
+                color: #121212;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            main {
+                width: 80%;
+                background-color: #3B1E54;
+                color: white;
+                margin: auto;
+                box-sizing: border-box; 
+                padding: 1% 3%; 
+                line-height: 150%; 
+            }
+
+            section {
+                width: 95%;
+                height: 95%;
+                display: none;
+            } 
+
+            nav {
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                text-align: center;
+                color: #3B1E54;
+            }
+
+            #header-nav {
+                background-color: rgb(143, 97, 142);
+            }
+
+            #footer-nav {
+                background-color: #3B1E54;
+                color: #9B7EBD;
+            }
+
+
+            a {
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                color: white;
+                text-decoration: none;
+                font-weight: normal;
+            }
+
+
+            label {
+                display: block; 
+                width: 100%;    
+                text-align: center;
+                margin-top: 0.5em;
+            }
+
+            #video-container {
+                display: flex; 
+                justify-content: center; 
+                position: relative;
+                width: 100%;
+                padding-top: 50%; 
+                overflow: hidden;
+                margin: 0 auto; 
+            }
+            #video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 100;
+                width: 90%;
+                height: 90%;
+            }
+
+            .active-link {
+                color: #ede372;
+                
+            }
+
+            hr {
+
+                margin-bottom: none;
+            }
+
+            #footer {
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+        </style>
+	</head>
+	<body>
+		<header>
+			<h1>All About Chess</h1>
+            <nav id="header-nav">
+                <a id="home-link" margin-left="1%" href="#home-section">Home</a>
+                &#11046;	
+                <a id="about-me-link" href="#about-me-section">About Me</a>
+                &#11046;	
+                <a id="where-link" href="#where-section">Chess Clubs In Charlotte</a>
+                &#11046;	
+                <a id="when-link" href="#when-section">Chess Meetup Calendar</a>
+                &#11046;	
+                <a id="how-link" href="#how-section">How Do You Play?</a>
+                &#11046;	
+                <a id="why-link" href="#why-section">Why Should You Play?</a>
+                &#11046;	
+                <a id="ai-prompts-link" href="#ai-prompts-section">AI Prompts</a>
+            </nav>
+		</header>
+			<main>
+                <section id="home-section">
+                    <h2>Home</h2>
+                    <p>
+                    </p>
+                    <figure>
+                        <img id="home-img" src="images/chess-what.png" alt="Chess board mid-game">
+                        <label><i>Chess board mid-game</i></label>
+                    </figure>
+                    <p>
+                        Chess is a board game played between two players on an 8x8 grid. Each player begins
+                        with 16 pieces, which include 8 pawns, 2 rooks, 2 knights, 2 bishops, a queen, and a king. The game
+                        originated in India during the 6th century but began to take on its modern
+                        form in the 15th century. 
+                    </p>
+                    <p>
+                        The elo rating system is used to determine the strength of a player. There are currently over 2000 
+                        Grandmasters, or players with at least 2500 elo and three grandmaster norms. 
+                    </p>
+                </section>
+                <section id="about-me-section" class="hidden">
+                    <h2>About Me</h2>
+                    <figure>
+                        <img id="about-me-img"  src="images/daniel-semakov-pic.png" alt="Picture of me">
+                        <label><i>Picture of myself</i></label>
+                    </figure>
+                    <p>
+                        My name is Daniel Semakov and I'm a student at UNC Charlotte. My parents taught me how to play chess
+                        when I was nine years old and enrolled me in a school chess club. I stopped playing in middle school,
+                        picked it back up in highschool, and have been playing it on-and-off since then.
+                    </p>
+                    <p>
+                        I go to a chess club every Thursday and play online on lichess.org. My current bullet rating is 1787.
+                        I also enjoy watching chess tournaments and am especially excited for the upcoming 2024 World Chess 
+                        Championship between Gukesh D. and Ding Liren.
+                    </p>
+                </section>
+                <section id="where-section" class="hidden">
+                    <h2>Chess Clubs in Charlotte</h2>
+                    <figure>
+                        <img id="where-img" src="images/chess-where.png" alt="Elders playing chess in the park">
+                        <label><i>Elders playing chess in the park</i></label>
+                    </figure>
+                    <h3>Charlotte Chess Center (North)</h3>
+                    <p>10211 Prosperity Park Drive, Ste 230 (floor 2), Charlotte, NC 28269</p>
+                    <h3>Charlotte Chess Center (Main/South)</h3>
+                    <p>10700 Kettering Drive, Ste E, Charlotte, NC 28226</p>
+                    <h3>Games Store Meetup</h3>
+                    <p>6908 Matthews-Mint Hill Rd #350, Mint Hill, NC 28227 (room in the back)</p>
+                </section>
+                <section id="when-section">
+                    <h2>Chess Meetup Calendar</h2>
+                    <figure>
+                        <img id="when-img" src="images/chess-when.png" alt="Calendar">
+                        <label><i>Calendar</i></label>
+                    </figure>
+                    <h3>Charlotte Chess Center (North)</h3>
+                    <p>Wednesday Adult Casual 6:30pm - 9:30pm​</p>
+                    <p>Friday Pizza Quads 7:00pm - 9:00pm</p>
+                    <h3>Charlotte Chess Center (Main/South)</h3>
+                    <p>Tuesday Night Action 7pm</p>
+                    <p>Friday Pizza Quads 7pm - 9pm</p>
+                    <h3>Games Store Meetup</h3>
+                    <p>Thursday 7pm - 9pm</p>
+                </section>
+                <section id="how-section" class="hidden">
+                    <h2>How Do You Play?</h2>
+                    <figure>
+                        <img id="how-img" src="images/chess-how.png" alt="Set of all chess pieces for white">
+                        <label><i>Set of all chess pieces for white</i></label>
+                    </figure>
+                    <p>
+                        Chess is played on an 8x8 board. Two sides, white and black, take turns making moves until one player wins
+                        by placing their opponent in checkmate or the two players draw. The players draw once one player is put in stalemate
+                        (they can't make any moves) or neither player has enough pieces left to checkmate. During each turn, a player can only 
+                        move one of their pieces.
+                    </p>
+                    <h3>Pieces in the game:</h3>
+                    <p>
+                        Pawn (1 point): moves up one square, or two squares if it is on the starting square
+                        <br>Knight (3 points): moves in an L-shape (two squares in one direction and one square in the perpendicular direction)
+                        <br>Bishop (3 points): moves any amount of squares diagonally
+                        <br>Queen (9 points): moves any amount of squares horizontally, vertically, or diagonally
+                        <br>King: moves one square horizontally, vertically, or diagonally
+                    </p>
+                </section>
+                <section id="why-section" class="hidden">
+                    <h2>Why Should You Play?</h2>
+                    <figure>
+                        <img src="images/chess-why.png" alt="Small replica of 'The Thinker' sculpture">
+                        <label><i>Small replica of "The Thinker" sculpture</i></label>
+                    </figure>
+                    <p>
+                        You should play chess because it's a fun and engaging game which exercises your mind. From its simple, elegant
+                        rules spring forth a complex game that has perplexed people around the world for centuries. The game is at
+                        an especially exciting point right now because there is a new generation of players who are pushing toward
+                        the top of the leaderboard and challenging the reign of the older legends. In the upcoming 2024 World Chess 
+                        Championship, Gukesh D. (18 years old) has the chance to take the throne from the reigning World Champion Ding
+                        Liren (32 years old).
+                    </p>
+                    <p>
+                        Here's an example of a game from the 2022 Speed Chess Championship that shows just how exciting chess can be.
+                    </p>
+                    <div id="video-container">
+                        <iframe src="https://www.youtube.com/embed/djyXtbyi03I?start=13368" frameborder="0" width="180" height="220" allowfullscreen>
+                    </iframe>
+                    </div>
+                </section>
+                <section id="ai-prompts-section">
+                    <h2>AI Prompts</h2>
+                    <p>I used ChatGPT in order to generate the Javascript code to only show the page which is selected in the nav bar.</p>
+                    <h3>Prompts</h3>
+                    <p>"In my website, I want it so that when an anchor tag is clicked in my nav bar, only a specific section is shown 
+                    and every other section is hidden. I want to code this in javascript. How do I do this?"</p>
+                    <p>"How do i make it so that only the home section is shown at first?"</p>
+                </section>
+                <hr>
+			</main>
+            <footer>
+                <nav id="footer-nav">
+                    <a href = "../">ITIS 3135</a>
+					&#11046;
+					<a href = "https://www.linkedin.com/in/daniel-semakov/">LinkedIn</a>
+					&#11046;
+					<a href = "https://github.com/DanielSemakov">GitHub</a>
+					&#11046;
+					<a href = "https://webpages.charlotte.edu/dsemako1/">CLT Web</a>
+					&#11046;
+					<a href = "https://danielsemakov.github.io/">GitHub Web</a>
+                    &#11046;
+					<a href = "">Hobby</a>
+                </nav>
+            </footer>
+        <script>
+           // JavaScript to show/hide sections and manage active link
+            document.addEventListener(('DOMContentLoaded'), () => {
+                const sections = document.querySelectorAll('main section');
+                const links = document.querySelectorAll('#header-nav a');
+
+                // Function to show the selected section and hide others
+                function showSection(event) {
+                    // Prevent default anchor behavior
+                    event.preventDefault();
+                    
+                    // Hide all sections
+                    sections.forEach((section) => {
+                        section.style.display = 'none';
+                    });
+
+                    // Remove active class from all links
+                    links.forEach((link) => {
+                        link.classList.remove('active-link');
+                    });
+
+                    // Show the clicked section
+                    const targetId = event.target.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+
+                    // Add active class to the clicked link
+                    event.target.classList.add('active-link');
+                }
+
+                // Set up click event listeners
+                links.forEach((link) => {
+                    link.addEventListener('click', showSection);
+                });
+
+                // Hide all sections on page load except for the home section
+                sections.forEach((section) => {
+                    section.style.display = 'none'; // Hide all sections
+                });
+                const homeSection = document.querySelector('#home-section');
+                if (homeSection) {
+                    homeSection.style.display = 'block'; // Show the home section
+                }
+
+                // Optionally, set the home link as active on page load
+                const homeLink = document.querySelector('nav a[href="#home-section"]');
+                if (homeLink) {
+                    homeLink.classList.add('active-link');
+                }
+            });
+        </script>
+	</body>
+</html>

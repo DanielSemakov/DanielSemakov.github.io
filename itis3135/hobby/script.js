@@ -1,0 +1,1 @@
+homeLink = document.getElementById("home-link");
