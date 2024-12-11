@@ -56,6 +56,11 @@ ul {
     margin: 20px 15%;
 }
 
+ol > ul {
+    padding-left: 0;
+    margin: 20px 0;
+}
+
 li {
     margin-bottom: 10px;
     font-size: 1.1em;
@@ -82,3 +87,8 @@ figure img {
     height: auto;
     border-radius: 8px;
 } 
+
+ol {
+    padding-left: 30px; 
+    margin: 20px 15%; 
+}

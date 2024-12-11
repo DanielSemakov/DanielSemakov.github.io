@@ -11,36 +11,43 @@
             <div data-include="components/header.html"></div> 
         </header> 
         <main>
-            <div class="grid-container">
-                <figure class="column">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <figure>
                     <img src="images/chess-club-1.png" alt="Gallery Image 1" class="gallery-img">
-                    <figcaption></figcaption>
+                    <figcaption>Image 1</figcaption>
                 </figure>
-                <figure class="column">
+                <figure>
                     <img src="images/chess-club-2.png" alt="Gallery Image 2" class="gallery-img">
-                    <figcaption></figcaption>
+                    <figcaption>Image 2</figcaption>
                 </figure>
-                <figure class="column">
+                <figure>
                     <img src="images/chess-club-3.png" alt="Gallery Image 3" class="gallery-img">
-                    <figcaption></figcaption>
+                    <figcaption>Image 3</figcaption>
                 </figure>
-                <figure class="column">
+                <figure>
                     <img src="images/chess-club-4.png" alt="Gallery Image 4" class="gallery-img">
-                    <figcaption></figcaption>
+                    <figcaption>Image 4</figcaption>
                 </figure>
-                <figure class="column">
+                <figure>
                     <img src="images/chess-club-5.png" alt="Gallery Image 5" class="gallery-img">
-                    <figcaption></figcaption>
-                </figure> 
-                <figure class="column">
+                    <figcaption>Image 5</figcaption>
+                </figure>
+                <figure>
                     <img src="images/chess-club-6.png" alt="Gallery Image 6" class="gallery-img">
-                    <figcaption></figcaption>
+                    <figcaption>Image 6</figcaption>
                 </figure> 
             </div>
         </main>
+        <div id="lightbox" class="lightbox">
+            <span id="prev" class="arrow left-arrow">&#10094;</span>
+            <img id="lightbox-img" class="lightbox-img" alt="Enlarged image">
+            <span id="next" class="arrow right-arrow">&#10095;</span>
+        </div>
         <footer>
             <div data-include="components/footer.html"></div>
         </footer>
         <script src="scripts/menuLoader.js"></script> 
+        <script src="scripts/gallery.js"></script> 
     </body>
 </html>

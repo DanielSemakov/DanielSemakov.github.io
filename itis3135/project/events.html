@@ -13,31 +13,44 @@
         <main>
             <h2>Events</h2>
             <h3>Upcoming Events</h3>
-            <div class="rectangle">
-                Thursday, December 6, 7pm - 9pm.
-                <br>Type: Casual
+            <div class="rectangle upcoming-event">
+                <span class="event-date">Thursday, December 19</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Casual</span>
+                <span class="event-timer">Event starts in: <span id="countdown1"></span></span>
+            </div>
+            <div class="rectangle upcoming-event">
+                <span class="event-date">Tuesday, December 17</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Tournament</span>
+                <span class="event-timer">Event starts in: <span id="countdown2"></span></span>
             </div>
             <h3>Past Events</h3>
-            <div class="rectangle">
-                Thursday, December 22, 7pm - 9pm.
-                <br>Type: Casual
+            <div class="rectangle past-event">
+                <span class="event-date">Thursday, December 22</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Casual</span>
             </div>
-            <div class="rectangle">
-                Tuesday, December 20, 7pm - 9pm.
-                <br>Type: Competitive
-            </div class="rectangle">
-            <div class="rectangle">
-                Thursday, December 15, 7pm - 9pm.
-                <br>Type: Casual
+            <div class="rectangle past-event">
+                <span class="event-date">Tuesday, December 20</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Competitive</span>
             </div>
-            <div class="rectangle">
-                Tuesday, December 13, 7pm - 9pm.
-                <br>Type: Competitive
+            <div class="rectangle past-event">
+                <span class="event-date">Thursday, December 15</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Casual</span>
+            </div>
+            <div class="rectangle past-event">
+                <span class="event-date">Tuesday, December 13</span>
+                <span class="event-time">7pm - 9pm</span>
+                <span class="event-type">Type: Competitive</span>
             </div>
         </main>
         <footer>
             <div data-include="components/footer.html"></div>
         </footer>
         <script src="scripts/menuLoader.js"></script> 
+        <script src="scripts/countdown.js"></script> 
     </body>
 </html>
