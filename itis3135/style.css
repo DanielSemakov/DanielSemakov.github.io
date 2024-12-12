@@ -1,14 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FFF8DC;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FFF8DC;
     color: #333;
+}
+
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 h1 {
     color: white;
     text-align: center;
+    font-size: 36px;
+    margin: 0;
     margin-bottom: 20px;
 }
 
@@ -32,6 +44,27 @@ p {
     line-height: 1.6;
     margin: 20px 15%;
     text-align: justify;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #16A085;
 }
 
 #header-nav {
@@ -74,7 +107,7 @@ ul ul {
 
 ul ul li {
     margin-bottom: 10px;
-    font-size: 1.1em;  
+    font-size: 1.1em;
 }
 
 figure {
@@ -86,9 +119,44 @@ figure img {
     max-width: 80%;
     height: auto;
     border-radius: 8px;
-} 
+}
 
 ol {
-    padding-left: 30px; 
-    margin: 20px 15%; 
+    padding-left: 30px;
+    margin: 20px 15%;
+}
+
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #16A085;
+}
+
+.footer-author, .footer-certification {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-certification a {
+    color: #16A085;
+}
+
+.footer-certification a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
 }
