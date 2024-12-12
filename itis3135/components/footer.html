@@ -18,12 +18,13 @@
     <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" id="validation-link-css">
         <img src="images/css_validation.png" alt="CSS Validation">
     </a>
-    <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/dsemako1/itis3135/project/" target="_blank" id="validation-link-wcag">
+    <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/dsemako1/itis3135/" target="_blank" id="validation-link-wcag">
         <img src="images/wcag_validation.png" alt="Accessibility Validation">
     </a>
 </div>
 <script>
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href)
-    document.getElementById("validation_link_css").setAttribute("href", "https://validator.w3.org/css-validator/validator?uri=" + location.href)
+    document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href)
+    document.getElementById("validation-link-css").setAttribute("href", "https://validator.w3.org/css-validator/validator?uri=" + location.href)
+    document.getElementById("validation-link-wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href)
 </script>
  
