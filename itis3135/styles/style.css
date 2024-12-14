@@ -33,13 +33,12 @@ h2 {
 }
 
 h3 {
-    margin-top: 30px;
+    margin-top: 3%;
     font-size: 1.5em;
-    text-align: center;
     margin-bottom: 20px;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     color: #333;
-    text-align: left;
+    text-align: center;
 }
 
 p {
@@ -194,3 +193,43 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+
+.employees-list {
+    margin-left: 7.5%;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.complex-table thead tr {
+    background-color: #704caf;
+    color: white;
+}
+
+.complex-table tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.complex-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.complex-table tfoot tr {
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+figcaption {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
