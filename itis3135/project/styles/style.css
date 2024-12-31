@@ -350,7 +350,7 @@ nav a:hover {
 /*Footer*/
  footer {
     background-color: #6a1b9a;
-    margin: 0;
+    margin: 5% 0 0 0;
     padding: 2.5% 0 2%; 
     text-align: center; 
 }
@@ -387,6 +387,11 @@ h3 {
     margin: 3% 15% 1%;
 }
 
+h4 {
+    font-size: 1.2rem;
+    margin: 0 0 1%; 
+}
+
 main img {
     margin: 0 auto;
     display: block;
@@ -403,8 +408,13 @@ p {
     line-height: 1.5;
 }
 
+ul {
+    margin-left: 14%;
+    line-height: 1.5;
+}
+
 iframe {
-    margin: 3% auto 5%;
+    margin: 3% auto;
     display: block;
     border: 0;
 }
@@ -413,6 +423,16 @@ iframe {
 .rectangle {
     border-width: thin;
     border-style: solid;
-    margin: 3% 15%;
+    margin: 2% 15%;
     padding: 1%;
+}
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*How To Play Chess Page*/
+.how-to-play-text {
+    margin-top: 3%;
 }
