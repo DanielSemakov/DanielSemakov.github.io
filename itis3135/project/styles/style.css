@@ -408,11 +408,6 @@ p {
     line-height: 1.5;
 }
 
-ul {
-    margin-left: 14%;
-    line-height: 1.5;
-}
-
 iframe {
     margin: 3% auto;
     display: block;
@@ -433,31 +428,24 @@ iframe {
 }
 
 /*How To Play Chess Page*/
+ul {
+    margin-left: 14%;
+    line-height: 1.5;
+}
+
 .how-to-play-text {
     margin-top: 3%;
 }
 
 /*Contact Us Page*/
 #contact-form {
-    /* background-color: rgb(252, 231, 203); */
     margin: 2% 25% 0; 
     width: 50%; 
     height: 40vw;
     border-radius: 8px;
     box-sizing: border-box;
     border: 1px solid; 
-
-    /*The following properties are probably temporary, just to make it easier to style the rest*/
-    /* border: brown 1px hidden; */
-    /* border-style: solid; */
 }
-
-/* #contact-form-header {
-    margin-left: 5%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    font-size: 1.3rem;
-} */
 
 /*General formatting for label, input, and textarea in Contact Form*/
 label {
@@ -468,13 +456,11 @@ label {
 input {
     display: block;
     margin: 0 5% 3%;
-    /* padding: 1.2% 32%; */
     box-sizing: border box;
     width: 87%;
     height: 7%;
     border-radius: 5px;
     border: 1px inset; 
-    /* border: 1px inset; */
     font-size: 1rem;
     padding-left: 1.5%;
     padding-right: 1.5%;
@@ -517,20 +503,17 @@ textarea {
 }
 
 #first-name-container {
-    /* margin: 2% 0 2% 4%;   */
     margin-left: 3%;
     width: 47%;
     height: 100%;
 }
 
 #last-name-container {
-    /* margin: 2% 5%; */
     width: 47%;
     height: 100%;
 }
 
 #first-name-container input {
-    /* padding-bottom: 7%; */
     width: 84%;
     height: 65%;
     box-sizing: border box;
@@ -546,8 +529,26 @@ textarea {
     padding-right: 3%;
 }
 
+/*Photo Gallery Page*/
+#photo-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2% 5% 0;
+    /* width: 90%;
+    height: 100%; */
+    width: 90%;
+    height: 40vw;
+}
 
-/*Formatting the first name and last name sections. All this code is such a mess. I should maybe
-go back and fix it later.*/
+.gallery-photo {
+    grid-row: span 1;
+    grid-column: span 1;
+}
 
-
+/*Shrink images in photo gallery so they fit together in one page. Yet, keep the high quality versions of the
+images saved in the images file so they can be displayed when clicked on.*/
+.gallery-photo img {
+    width: 23vw;
+    height: 17vw;
+}
