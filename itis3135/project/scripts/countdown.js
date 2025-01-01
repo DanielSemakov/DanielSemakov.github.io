@@ -1,31 +1,33 @@
-function updateCountdown(countdownElement, eventTime) {
-    var currentTime = new Date().getTime();
-    var timeLeft = eventTime - currentTime;
+const updateCountdown = (countdownContainer, futureTime) => {
+    futureTime = Date.parse(futureTime);
 
-    if (timeLeft <= 0) {
-        countdownElement.innerHTML = "Event Started!";
-    } else {
-        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    const timeDiff = futureTime - Date.now();
 
-        countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    if (timeDiff < 0) {
+        countdownContainer.innerHTML = "Event started!";
+        return;
     }
-}
 
-function startCountdown(eventDate, countdownElementId) {
-    var countdownElement = document.getElementById(countdownElementId);
-    var eventTime = new Date(eventDate).getTime();
+    let numSeconds = Math.floor(timeDiff / 1000);
 
-    setInterval(function() {
-        updateCountdown(countdownElement, eventTime);
-    }, 1000);
-}
+    let numMinutes = Math.floor(numSeconds / 60);
+    numSeconds -= numMinutes * 60;
 
-window.onload = function() {
-    startCountdown('December 19, 2024 19:00:00', 'countdown1');
-    startCountdown('December 17, 2024 19:00:00', 'countdown2');
+    let numHours = Math.floor(numMinutes / 60);
+    numMinutes -= numHours * 60;
+
+    let numDays = Math.floor(numHours / 24);
+    numHours -= numDays * 24;
+
+    countdownContainer.innerHTML = `${numDays} Days, ${numHours} Hrs, ${numMinutes} Mins, ${numSeconds} Secs`;
 };
 
+//Calls countdown function every second (1000 ms)
+var intervalId = window.setInterval(function(){
+    const countdown1 = document.getElementById("countdown1");
+    const countdown2 = document.getElementById("countdown2");
 
+    updateCountdown(countdown1, "09 Jan 2025 19:00:00 EST");
+    updateCountdown(countdown2, "07 Jan 2025 19:00:00 EST");
+
+  }, 1000);
