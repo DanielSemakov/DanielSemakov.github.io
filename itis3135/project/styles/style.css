@@ -26,6 +26,41 @@ h1 {
     letter-spacing: 2px;
 }
 
+#sign-up-button {
+    position: absolute;
+    top: 2%;
+    right: 11%;
+    height: 6%; 
+    width: 8%;
+    background-color: rgb(35, 35, 209);
+    color: white;
+    border-radius: 5px;
+    border-style: hidden;
+    border-width: 1px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#login-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    height: 6%; 
+    width: 8%;
+    background-color: rgb(35, 35, 209);
+    color: white;
+    border-radius: 5px;
+    border-style: hidden;
+    border-width: 1px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#sign-up-button:hover, #login-button:hover {
+    background-color: rgb(31, 31, 186);
+}
+
+
 nav {
     display: flex;
     justify-content: center;
