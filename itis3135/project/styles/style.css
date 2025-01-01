@@ -26,27 +26,27 @@ h1 {
     letter-spacing: 2px;
 }
 
+/*A lot of repetition between sign up and login buttons. Can fix this later.*/
 #sign-up-button {
     position: absolute;
     top: 2%;
     right: 11%;
-    height: 6%; 
-    width: 8%;
-    background-color: rgb(35, 35, 209);
+    padding: 0.75% 2%;
+    background-color: rgb(35, 35, 209); 
     color: white;
     border-radius: 5px;
     border-style: hidden;
     border-width: 1px;
     font-size: 0.9rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #login-button {
     position: absolute;
     top: 2%;
     right: 2%;
-    height: 6%; 
-    width: 8%;
+    padding: 0.75% 2.3%;
     background-color: rgb(35, 35, 209);
     color: white;
     border-radius: 5px;
@@ -54,12 +54,12 @@ h1 {
     border-width: 1px;
     font-size: 0.9rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #sign-up-button:hover, #login-button:hover {
     background-color: rgb(31, 31, 186);
 }
-
 
 nav {
     display: flex;
@@ -84,7 +84,7 @@ nav a:hover {
 /*Footer*/
  footer {
     background-color: #6a1b9a;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 0;  
     padding: 2.5% 0 2%; 
     text-align: center; 
 }
@@ -192,7 +192,8 @@ input {
     margin: 0 5% 3%;
     box-sizing: border box;
     width: 87%;
-    height: 7%;
+    /* height: 7%; */
+    height: 2.2rem;
     border-radius: 5px;
     border: 1px inset; 
     font-size: 1rem;
@@ -205,7 +206,7 @@ textarea {
     margin: 0 5% 3%;
     width: 87%;
     min-height: 20%;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 1rem;
     box-sizing: border box;
     padding: 1.5%;
@@ -213,7 +214,7 @@ textarea {
     resize: vertical;
 }
 
-#contact-form button {
+#contact-form-button {
     margin: 1% 5%;
     width: 25%;
     height: 9%;
@@ -223,6 +224,7 @@ textarea {
     color: white;
     border-radius: 8px;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 /*Special rules for name-container in Contact Form, overriding the general rules
@@ -249,7 +251,6 @@ textarea {
 
 #first-name-container input {
     width: 84%;
-    height: 65%;
     box-sizing: border box;
     padding-left: 3%;
     padding-right: 3%;
@@ -257,7 +258,6 @@ textarea {
 
 #last-name-container input {
     width: 84%;
-    height: 65%;
     box-sizing: border box;
     padding-left: 3%;
     padding-right: 3%;
@@ -315,3 +315,53 @@ images saved in the images file so they can be displayed when clicked on.*/
     cursor: pointer;
 }
 
+/*Sign Up & Login Pages*/
+.entry-page-body {
+    background-color: rgb(52, 52, 52);
+    height: 122%; 
+}
+
+.entry-page-h1 {
+    padding: 1% 0;
+}
+
+.entry-page-h2 {
+    font-size: 2.5rem;
+    margin-top: 4%;
+}
+
+.entry-form-button {
+    margin: 3% 5% 1%;
+    width: 25%;
+    height: 2.5rem;
+    background-color: #6a1b9a;
+    box-sizing: border box;
+    border: 0;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/*Sign Up Page only*/
+
+#sign-up-form {
+    margin: 5% auto; 
+    width: 40%; 
+    height: 80vh;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid; 
+    background-color: #8992c3;
+}
+
+/*Login Page only*/
+#login-form {
+    margin: 5% auto; 
+    width: 40%; 
+    height: 53vh;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid; 
+    background-color: #8992c3;
+}
