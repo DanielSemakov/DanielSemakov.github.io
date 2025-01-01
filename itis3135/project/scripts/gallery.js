@@ -51,6 +51,11 @@ const goToPrevImg = () => {
     }
 };
 
+/**
+ * When the image container is open, if the user clicks anywhere on the screen except the arrow buttons,
+ * it exits the image container. Otherwise, if the next button is clicked, go to the next image. If the back 
+ * button is clicked, go to the previous image.
+ */
 imageContainer.addEventListener("click", (event) => {
     if (event.target === nextBtn) {
         goToNextImg();
