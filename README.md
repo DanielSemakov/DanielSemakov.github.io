@@ -15,7 +15,7 @@ The back-end will allow users to securely create an account and write comments u
 
 Personal Site: https://danielsemakov.github.io/front-end/ <br>
 ITIS 3135 Course Site: https://danielsemakov.github.io/front-end/itis3135/ <br>
-Mint Hill Chess Club Site: https://danielsemakov.github.io/front-end/itis3135/project/index.html
+Mint Hill Chess Club Site: https://danielsemakov.github.io/front-end/itis3135/project/
 
 ## Lessons Learned
 
