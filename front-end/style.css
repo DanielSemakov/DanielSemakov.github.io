@@ -1,3 +1,7 @@
+body {
+    background-color: #424cb8; 
+}
+
 header {
     font-family: roboto sans-serif;
     text-align: center;
@@ -31,7 +35,7 @@ img {
     width: 80%; 
     padding: 10px 20px; 
     margin: 0 auto;
-    background-color: rgb(96, 166, 96);
+    background-color: #91c4a0;
 }
 
 hr {
