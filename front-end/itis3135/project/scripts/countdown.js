@@ -27,7 +27,7 @@ var intervalId = window.setInterval(function(){
     const countdown1 = document.getElementById("countdown1");
     const countdown2 = document.getElementById("countdown2");
 
-    updateCountdown(countdown1, "09 Jan 2025 19:00:00 EST");
-    updateCountdown(countdown2, "07 Jan 2025 19:00:00 EST");
+    updateCountdown(countdown1, "13 Mar 2025 19:00:00 EST");
+    updateCountdown(countdown2, "11 Mar 2025 19:00:00 EST");
 
   }, 1000);
