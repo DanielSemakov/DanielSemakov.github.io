@@ -22,12 +22,36 @@ const updateCountdown = (countdownContainer, futureTime) => {
     countdownContainer.innerHTML = `${numDays} Days, ${numHours} Hrs, ${numMinutes} Mins, ${numSeconds} Secs`;
 };
 
+function getNextWeeklyOccurrence(weekday, hour, minute) {
+    const now = new Date();
+    const next = new Date(now);
+
+    next.setHours(hour, minute, 0, 0);
+
+    const dayDiff =
+        (weekday - now.getDay() + 7) % 7 ||
+        (now > next ? 7 : 0);
+
+    next.setDate(now.getDate() + dayDiff);
+
+    return next;
+}
+
+//Date object for next instance of Thursday 7 PM
+let meeting1Time = getNextWeeklyOccurrence(4, 19, 0); 
+//Date object for next instance of Tuesday 7PM
+let meeting2Time = getNextWeeklyOccurrence(2, 19, 0); // Tuesday 7:00 PM
+
+
 //Calls countdown function every second (1000 ms)
-var intervalId = window.setInterval(function(){
-    const countdown1 = document.getElementById("countdown1");
-    const countdown2 = document.getElementById("countdown2");
+setInterval(() => {
+    updateCountdown(
+        document.getElementById("countdown1"),
+        meeting1Time
+    );
 
-    updateCountdown(countdown1, "13 Mar 2025 19:00:00 EST");
-    updateCountdown(countdown2, "11 Mar 2025 19:00:00 EST");
-
-  }, 1000);
+    updateCountdown(
+        document.getElementById("countdown2"),
+        meeting2Time
+    );
+}, 1000);
