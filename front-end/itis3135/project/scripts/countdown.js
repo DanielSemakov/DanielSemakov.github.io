@@ -14,11 +14,6 @@ const updateCountdown = (countdownContainer, futureTime) => {
 
     const timeDiff = futureTime - Date.now();
 
-    if (timeDiff < 0) {
-        countdownContainer.innerHTML = "Event started!";
-        return;
-    }
-
     let numSeconds = Math.floor(timeDiff / 1000);
 
     let numMinutes = Math.floor(numSeconds / 60);
