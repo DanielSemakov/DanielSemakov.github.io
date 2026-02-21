@@ -9,8 +9,6 @@ function formatEventDate(date) {
     });
 }
 
-
-
 const updateCountdown = (countdownContainer, futureTime) => {
     futureTime = Date.parse(futureTime);
 
@@ -57,14 +55,12 @@ function subtractDays(date, days) {
     return newDate;
 }
 
-const events = [];
-
 function generateEvents() {
 
     let nextTuesday = getNextWeeklyOccurrence(2, 19, 0);
     let nextThursday = getNextWeeklyOccurrence(4, 19, 0);
 
-    let events = [
+    return [
         { name: "Tuesday Competitive", date: nextTuesday },
         { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 7) },
         { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 14) },
@@ -73,16 +69,15 @@ function generateEvents() {
         { name: "Thursday Casual", date: subtractDays(nextThursday, 7) },
         { name: "Thursday Casual", date: subtractDays(nextThursday, 14) }
     ];
-
-    return events;
 }
 
+let events;
 
 function renderEvents() {
 
-    let events = generateEvents();
+    events = generateEvents();
 
-    // Sort newest to oldest
+    // Sort from farthest in the future to farthest in the past
     events.sort((a, b) => b.date - a.date);
 
     for (let i = 0; i < events.length; i++) {
@@ -100,11 +95,11 @@ renderEvents();
 setInterval(() => {
     updateCountdown(
         document.getElementById("countdown1"),
-        events[0]
+        events[0].date
     );
 
     updateCountdown(
         document.getElementById("countdown2"),
-        events[1]
+        events[1].date
     );
 }, 1000);
