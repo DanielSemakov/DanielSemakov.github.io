@@ -57,17 +57,7 @@ function subtractDays(date, days) {
     return newDate;
 }
 
-
-function formatEventDate(date) {
-    return date.toLocaleString("en-US", {
-        weekday: "long",
-        month: "long",
-        day: "numeric",
-        hour: "numeric",
-        minute: "2-digit",
-        hour12: true
-    });
-}
+const events = [];
 
 function generateEvents() {
 
@@ -95,46 +85,26 @@ function renderEvents() {
     // Sort newest to oldest
     events.sort((a, b) => b.date - a.date);
 
-    let now = new Date();
-
-    let upcoming = events.filter(e => e.date > now);
-    let past = events.filter(e => e.date <= now);
-
-    let upcomingContainer = document.getElementById("upcoming-events");
-    let pastContainer = document.getElementById("past-events");
-
-    // upcomingContainer.innerHTML = "";
-    // pastContainer.innerHTML = "";
-
-    // upcoming.forEach(event => {
-    //     upcomingContainer.innerHTML += `
-    //         <div class="rectangle">
-    //             <h4>${event.name}</h4>
-    //             <span>${formatEventDate(event.date)}</span>
-    //         </div>
-    //     `;
-    // });
-
-    // past.forEach(event => {
-    //     pastContainer.innerHTML += `
-    //         <div class="rectangle">
-    //             <h4>${event.name}</h4>
-    //             <span>${formatEventDate(event.date)}</span>
-    //         </div>
-    //     `;
-    // });
+    for (let i = 0; i < events.length; i++) {
+        document.getElementById(`event-name-${i + 1}`)
+            .innerText = events[i].name;
+        document.getElementById(`event-date-${i + 1}`)
+            .innerText = formatEventDate(events[i].date) + " - 9PM";
+    }
 }
+
+renderEvents();
 
 
 //Calls countdown function every second (1000 ms)
 setInterval(() => {
     updateCountdown(
         document.getElementById("countdown1"),
-        meeting1Time
+        events[0]
     );
 
     updateCountdown(
         document.getElementById("countdown2"),
-        meeting2Time
+        events[1]
     );
 }, 1000);
