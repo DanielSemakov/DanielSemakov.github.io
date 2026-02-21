@@ -1,12 +1,18 @@
+function formatEventDate(date) {
+    return date.toLocaleString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+}
+
 const updateCountdown = (countdownContainer, futureTime) => {
     futureTime = Date.parse(futureTime);
 
     const timeDiff = futureTime - Date.now();
-
-    if (timeDiff < 0) {
-        countdownContainer.innerHTML = "Event started!";
-        return;
-    }
 
     let numSeconds = Math.floor(timeDiff / 1000);
 
@@ -37,21 +43,63 @@ function getNextWeeklyOccurrence(weekday, hour, minute) {
     return next;
 }
 
-//Date object for next instance of Thursday 7 PM
-let meeting1Time = getNextWeeklyOccurrence(4, 19, 0); 
-//Date object for next instance of Tuesday 7PM
-let meeting2Time = getNextWeeklyOccurrence(2, 19, 0); // Tuesday 7:00 PM
+
+function subtractDays(date, days) {
+    let newDate = new Date(date);
+    newDate.setDate(newDate.getDate() - days);
+    return newDate;
+}
+
+function generateEvents() {
+
+    let nextTuesday = getNextWeeklyOccurrence(2, 19, 0);
+    let nextThursday = getNextWeeklyOccurrence(4, 19, 0);
+
+    return [
+        { name: "Tuesday Competitive", date: nextTuesday },
+        { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 7) },
+        { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 14) },
+
+        { name: "Thursday Casual", date: nextThursday },
+        { name: "Thursday Casual", date: subtractDays(nextThursday, 7) },
+        { name: "Thursday Casual", date: subtractDays(nextThursday, 14) }
+    ];
+}
+
+let events;
+
+function renderEvents() {
+
+    events = generateEvents();
+
+    // Sort from farthest in the future to farthest in the past
+    events.sort((a, b) => b.date - a.date);
+
+    for (let i = 0; i < events.length; i++) {
+        document.getElementById(`event-name-${i + 1}`)
+            .innerText = events[i].name;
+        document.getElementById(`event-date-${i + 1}`)
+            .innerText = formatEventDate(events[i].date) + " - 9PM";
+    }
+}
+
+renderEvents();
 
 
 //Calls countdown function every second (1000 ms)
 setInterval(() => {
     updateCountdown(
         document.getElementById("countdown1"),
-        meeting1Time
+        events[0].date
     );
 
     updateCountdown(
         document.getElementById("countdown2"),
-        meeting2Time
+        events[1].date
     );
+
+    if (Date.now() >= events[1].date.getTime()) {
+        location.reload();
+    }
+
 }, 1000);
