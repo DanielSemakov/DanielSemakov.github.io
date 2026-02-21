@@ -1,3 +1,16 @@
+function formatEventDate(date) {
+    return date.toLocaleString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+}
+
+
+
 const updateCountdown = (countdownContainer, futureTime) => {
     futureTime = Date.parse(futureTime);
 
@@ -37,10 +50,80 @@ function getNextWeeklyOccurrence(weekday, hour, minute) {
     return next;
 }
 
-//Date object for next instance of Thursday 7 PM
-let meeting1Time = getNextWeeklyOccurrence(4, 19, 0); 
-//Date object for next instance of Tuesday 7PM
-let meeting2Time = getNextWeeklyOccurrence(2, 19, 0); // Tuesday 7:00 PM
+
+function subtractDays(date, days) {
+    let newDate = new Date(date);
+    newDate.setDate(newDate.getDate() - days);
+    return newDate;
+}
+
+
+function formatEventDate(date) {
+    return date.toLocaleString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+}
+
+function generateEvents() {
+
+    let nextTuesday = getNextWeeklyOccurrence(2, 19, 0);
+    let nextThursday = getNextWeeklyOccurrence(4, 19, 0);
+
+    let events = [
+        { name: "Tuesday Competitive", date: nextTuesday },
+        { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 7) },
+        { name: "Tuesday Competitive", date: subtractDays(nextTuesday, 14) },
+
+        { name: "Thursday Casual", date: nextThursday },
+        { name: "Thursday Casual", date: subtractDays(nextThursday, 7) },
+        { name: "Thursday Casual", date: subtractDays(nextThursday, 14) }
+    ];
+
+    return events;
+}
+
+
+function renderEvents() {
+
+    let events = generateEvents();
+
+    // Sort newest to oldest
+    events.sort((a, b) => b.date - a.date);
+
+    let now = new Date();
+
+    let upcoming = events.filter(e => e.date > now);
+    let past = events.filter(e => e.date <= now);
+
+    let upcomingContainer = document.getElementById("upcoming-events");
+    let pastContainer = document.getElementById("past-events");
+
+    // upcomingContainer.innerHTML = "";
+    // pastContainer.innerHTML = "";
+
+    // upcoming.forEach(event => {
+    //     upcomingContainer.innerHTML += `
+    //         <div class="rectangle">
+    //             <h4>${event.name}</h4>
+    //             <span>${formatEventDate(event.date)}</span>
+    //         </div>
+    //     `;
+    // });
+
+    // past.forEach(event => {
+    //     pastContainer.innerHTML += `
+    //         <div class="rectangle">
+    //             <h4>${event.name}</h4>
+    //             <span>${formatEventDate(event.date)}</span>
+    //         </div>
+    //     `;
+    // });
+}
 
 
 //Calls countdown function every second (1000 ms)
