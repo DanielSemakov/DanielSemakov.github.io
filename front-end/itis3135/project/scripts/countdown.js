@@ -102,4 +102,9 @@ setInterval(() => {
         document.getElementById("countdown2"),
         events[1].date
     );
+
+    if (Date.now() >= events[1].date.getTime()) {
+        location.reload();
+    }
+
 }, 1000);
